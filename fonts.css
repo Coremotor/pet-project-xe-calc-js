@@ -1,0 +1,44 @@
+/* roboto-regular - latin_cyrillic */
+@font-face {
+    /* Устанавливает семейство шрифта, которое будет использоваться для оформления текста содержимого. */
+    font-family: "Roboto";
+    /* Определяет начертание шрифта — обычное, курсивное или наклонное.*/
+    font-style: normal;
+    /* Устанавливает насыщенность шрифта. */
+    font-weight: 400;
+    /* Дескриптор font-display определяет то, как шрифт, подключенный через font face будет отображаться в зависимости от того, загрузился ли он и готов ли к использованию. */
+    font-display: swap; /*Для шрифта не задается период блокировки и задается бесконечный период подмены.*/
+    src: local("Roboto"), local("Roboto-Regular"),
+    url("./fonts/roboto-400.woff2") format("woff2"), /* Super Modern Browsers */
+    url("./fonts/roboto-400.woff") format("woff") /* Modern Browsers */
+}
+/* roboto-500 - latin_cyrillic */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local("Roboto Medium"), local("Roboto-Medium"),
+    url("./fonts/roboto-500.woff2") format("woff2"), /* Super Modern Browsers */
+    url("./fonts/roboto-500.woff") format("woff") /* Modern Browsers */
+}
+/* roboto-700 - latin_cyrillic */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local("Roboto Bold"), local("Roboto-Bold"),
+    url("./fonts/roboto-700.woff2") format("woff2"), /* Super Modern Browsers */
+    url("./fonts/roboto-700.woff") format("woff") /* Modern Browsers */
+}
+/* roboto-900 - latin_cyrillic */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local("Roboto Black"), local("Roboto-Black"),
+    url("./fonts/roboto-900.woff2") format("woff2"), /* Super Modern Browsers */
+    url("./fonts/roboto-900.woff") format("woff") /* Modern Browsers */
+}
