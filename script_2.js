@@ -57,14 +57,10 @@ function getFloat(value){
 
 function handleForm() {
 	const xe = getFloat(xeFormXeElem.value);
-	console.log(xe)
 	const carbohydrates = getFloat(xeFormCarbohydratesElem.value);
-	console.log(carbohydrates)
 	const weight = getFloat(xeFormWeightProductElem.value);
-	console.log(weight)
 	let result = (carbohydrates / 100 * weight / xe).toFixed(2)
 	isNaN(Number(result)) ? xeFormXeResultElem.innerHTML = '0.00' : xeFormXeResultElem.innerHTML = result;
-	// xeFormXeResultElem.innerHTML = result;
 }
 
 function addProduct (event) {
