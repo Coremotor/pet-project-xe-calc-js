@@ -51,11 +51,20 @@ function renderProduct() {
 	})
 }
 
+function getFloat(value){
+	return parseFloat(value.replace(/,/, '.'));
+}
+
 function handleForm() {
-	const xe = xeFormXeElem.value;
-	const carbohydrates = xeFormCarbohydratesElem.value;
-	const weight = xeFormWeightProductElem.value;
-	xeFormXeResultElem.innerHTML = (carbohydrates / 100 * weight / xe).toFixed(2);
+	const xe = getFloat(xeFormXeElem.value);
+	console.log(xe)
+	const carbohydrates = getFloat(xeFormCarbohydratesElem.value);
+	console.log(carbohydrates)
+	const weight = getFloat(xeFormWeightProductElem.value);
+	console.log(weight)
+	let result = (carbohydrates / 100 * weight / xe).toFixed(2)
+	isNaN(Number(result)) ? xeFormXeResultElem.innerHTML = '0.00' : xeFormXeResultElem.innerHTML = result;
+	// xeFormXeResultElem.innerHTML = result;
 }
 
 function addProduct (event) {
@@ -63,10 +72,10 @@ function addProduct (event) {
 	resultItems.push(
 		{
 			id: String(Date.now()),
-			xe: Number(xeFormXeElem.value),
-			carbohydrates: Number(xeFormCarbohydratesElem.value),
-			weight: Number(xeFormWeightProductElem.value),
-			xeResult: Number(xeFormXeResultElem.textContent),
+			xe: Number(getFloat(xeFormXeElem.value)),
+			carbohydrates: Number(getFloat(xeFormCarbohydratesElem.value)),
+			weight: Number(getFloat(xeFormWeightProductElem.value)),
+			xeResult: Number(getFloat(xeFormXeResultElem.textContent)),
 		}
 	);
 
